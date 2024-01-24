@@ -3,15 +3,19 @@ let json_output;
 let hostname = []
 let consumed_units = []
 let temp_var = []
+let start_table_creation=[];
 
-//Func();
+Func();
 
 
 function Func() { 
-	fetch("./response_1705301588001.json") 
+	fetch("https://apm.indusind.com/e/a5524478-859f-46f3-abcf-9f33bb51d130/api/v1/oneagents?includeDetails=true&availabilityState=MONITORED",{
+  method: "GET",
+  headers: {"Authorization": "Api-Token dt0c01.OCEZZ7BO63YFVA3R2YCDX35Y.OHTMAWBAEUXSZ4GH6G4BQEJDBYJHAXUXFMDZUAMVLDAKJJ27YOLNNBO7KXV3CK2E"}
+}) 
 		.then((res) => { 
 		return res.json(); 
-	}) 
+	})  
 	.then((data) => {
         console.log(data);
         json_output = data;
@@ -25,14 +29,14 @@ function Func() {
               //  console.log(hostname[i],consumed_units[i]);
                 hostname.unshift(hostname[i]);
                 consumed_units.unshift(consumed_units[i]);
-
+                start_table_creation.unshift("1");
                 
             }
 
             
        
     });
-   
+console.log("Executed Func Sucess" +start_table_creation );   
 }
 
 console.log(hostname);
@@ -45,10 +49,12 @@ let sleep = ms => {
     
     //document.write("Begin" + "<br>");
     console.log("Sleeping");
-    
     sleep(5000).then(() => 
     {
+        if(start_table_creation)
+        {
         table_creation();
+        }
 
     });
 
@@ -73,17 +79,3 @@ function table_creation ()
 }
 document.body.appendChild(table);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
