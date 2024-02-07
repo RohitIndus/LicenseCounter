@@ -5,8 +5,6 @@ let temp_var = []
 let start_table_creation=[];
 
 
-
-
 function Func(a,callback) { 
   fetch("https://apm.indusind.com/e/a5524478-859f-46f3-abcf-9f33bb51d130/api/v1/oneagents?includeDetails=true&availabilityState=MONITORED",{
   method: "GET",
@@ -41,28 +39,6 @@ function sum()
     console.log(sum);
     document.getElementById("myButton1").innerHTML=sum;
 }
-
-//----------SLEEP
-// let sleep = ms => {
-//     return new Promise(resolve => setTimeout(resolve, ms));
-//     };
-    
-//     //document.write("Begin" + "<br>");
-//     console.log("Sleeping");
-//     sleep(5000).then(() => 
-//     {
-//         console.log("Done Sleeping");
-//         if(start_table_creation.includes("1"))
-//         {
-//        // console.log("Inside Table Creation Logic" +start_table_creation );   
-//         table_creation();
-//         }
-
-//     });
-
-//------------------------------------------------------------------------
-
-
 
 function table_creation()
 {

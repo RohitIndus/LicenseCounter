@@ -1,6 +1,7 @@
 body{
     background-color: beige;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 13px; 
 }
 
 h1,
@@ -21,13 +22,13 @@ table{
 th{
     height: 15px;
     width: 500px;
-   background-color: aqua;
+   background-color: wheat;
 }
 
 td{
     height: 10px;
     width: 500px;
-   background-color: aqua;
+   background-color: wheat;
 }
 
 button{
