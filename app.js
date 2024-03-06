@@ -42,6 +42,7 @@ function sum()
 
 function table_creation()
 {
+    
     console.log("table_creation ini");
     console.log(hostname.length);
     var table = document.createElement('table');
@@ -64,6 +65,8 @@ function table_creation()
     table.appendChild(tr);
 }
 document.body.appendChild(table);
+document.getElementById("myButton1").disabled=true;
+
 }
 
 //Func(1,table_creation);
